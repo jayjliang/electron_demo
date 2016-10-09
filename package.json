@@ -1,0 +1,34 @@
+{
+  "name": "demo",
+  "version": "0.1.0",
+  "main": "main.js",
+  "homepage": "http://www.heraldstudio.com",
+  "email":"jerry.liangj@qq.com",
+  "devDependencies": {
+    "asar": "^0.12.3",
+    "electron-builder": "^7.11.4",
+    "electron-packager": "^8.1.0",
+    "electron-prebuilt": "^1.4.3"
+  },
+  "scripts": {
+    "pack": "electron-packager . HeraldClient --out ./dist --all -asar",
+    "run": "electron ."
+  },
+  "build": {
+    "asar": true,
+    "appId": "HeraldClient",
+    "mac":{
+      "icon":"build/icon.icns",
+      "category": "public.app-category.prosuctivity"
+    },
+    "win":{
+        "iconUrl":"http://7xsec6.com1.z0.glb.clouddn.com/icon.ico",
+	"msi":false,
+	"title":"HeraldApp"
+    },
+    "linux":{
+        "target":"deb",
+        "maintainer":"LiangJ"
+    }
+  }
+}
